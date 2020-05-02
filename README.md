@@ -22,13 +22,22 @@ This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://ww
     
     A and B both are examples of min heap.
  
+## How is Binary Heap represented?
+``` A Binary Heap is a Complete Binary Tree. A binary heap is typically represented as an array.
+
+The root element will be at Arr[0].
+Below table shows indexes of other nodes for the ith node, i.e., Arr[i]:
+Arr[(i-1)/2]	Returns the parent node
+Arr[(2*i)+1]	Returns the left child node
+Arr[(2*i)+2]	Returns the right child node
+```
 ## Installation
 
 `npm i byheap --save`
 
 ## Type of binary heaps supported?
 
-This implementation supports max heap and min heap both.
+This implementation supports **max heap and min heap** both.
 
 ## Params for BinaryHeap constructor?
 
@@ -127,4 +136,8 @@ Min Heap:  BinaryHeap {
   draftBT: [ 4, 2, 3, 5, 1, 6, 7, 11, 10 ],
   resHeap: [ '1', '4', '3', '5', '2', '6', '7', '11', '10' ],
   type: 2 }
+
+  BinaryHeap.resHeap ==> Resulted Binary Heap
+  BinaryHeap.draftBT ==> Input Binary Tree
+  BinaryHeap.type ==> 1 ( for MAX_HEAP ) or 2 ( for MIN_HEAP )
 ```
