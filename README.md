@@ -1,27 +1,12 @@
 ## What is this ?
 
-This is es6 implementation for Binary Heap(Max/Min) data structure.
-
-## Installation
-
-`npm i byheap --save`
-
-## Type of binary heaps supported?
-
-This implementation supports max heap and min heap both.
-
-## Params for BinaryHeap constructor?
-
-* BinaryHeap constructor accepts two parameters (List<...node>,type).
-** First parameter is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
-** Second Parameter : Type of Binary Heap ==> Max Heap or Min Heap
-** Type can accept two values 1(for Max Heap) or 2(for Min Heap).
+This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://www.geeksforgeeks.org/binary-heap/).
 
 ##  Binary Heap
 * A Binary Heap is a Binary Tree with following properties.
-** 1) It’s a complete tree (All levels are completely filled except possibly the last level and the last level has all keys as left as possible). This property of Binary Heap makes them suitable to be stored in an array.
+    ** 1) It’s a complete tree (All levels are completely filled except possibly the last level and the last level has all keys as left as possible). This property of Binary Heap makes them suitable to be stored in an array.
 
-** 2) A Binary Heap is either Min Heap or Max Heap. In a Min Binary Heap, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
+    ** 2) A Binary Heap is either Min Heap or Max Heap. In a Min Binary Heap, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
 
 ## Examples of Min Heap:
 
@@ -37,6 +22,22 @@ This implementation supports max heap and min heap both.
     
     A and B both are examples of min heap.
  
+## Installation
+
+`npm i byheap --save`
+
+## Type of binary heaps supported?
+
+This implementation supports max heap and min heap both.
+
+## Params for BinaryHeap constructor?
+
+* BinaryHeap constructor accepts two parameters (List<...node>,type).
+    ** First parameter is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
+    ** Second Parameter : Type of Binary Heap ==> Max Heap or Min Heap
+    ** Type can accept two values 1(for Max Heap) or 2(for Min Heap).
+
+
 Then...
 
 ## How to use ?
