@@ -1,12 +1,13 @@
 {
   "name": "byheap",
   "version": "1.0.1",
-  "description": "",
+  "description": "ES6 implementation of Binary Heap data structure",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Rahul Choudhary",
+  "keywords": ["npm","es6","binary heap","max heap","min heap","data structure"],
+  "author": "Rahul Choudhary <ragulchoudhary666666@gmail.com>",
+  "repository" : {"type": "git", "url": "git://github.com/rahul1368/byheap.git"},
   "license": "ISC"
 }

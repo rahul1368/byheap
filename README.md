@@ -35,9 +35,23 @@ Then...
 ```
     import BinaryHeap from 'byheap';
 
-    const arr = [{key:1},{key:2},{key:3},{key:4},{key:5}]; // Input Binary Tree represented as a list
-    const BMaxHeapObj = new BinaryHeap(arr,1); // (BT,type)
-    const BMinHeapObj = new BinaryHeap(arr,2); // (BT,type)
-    console.log("Max Heap:",BMaxHeapObj);
-    console.log("Min Heap:",BMinHeapObj);
+    let arr1 = [{key:4}, {key:2}, {key:3}, {key:5}, {key:1}, {key:6}, {key:7}, {key:11}, {key:10}]  
+    
+    let maxHeapObj1 = new BinaryHeap(arr1,1); 
+    let minHeapObj1 = new BinaryHeap(arr1,2);
+    
+    # Input can also be provided as given below 
+    
+        let arr2 = ["4","2","3","5","1","6","7","11","10"]  
+    
+    # Or ...
+        let arr3 = [4,2,3,5,1,6,7,11,10]  
+        
+        let maxHeapObj1   = new BinaryHeap(arr2,1);
+        let minHeapObj1 = new BinaryHeap(arr2,2);
+    
+        console.log("Max Heap: ",maxHeapObj1);
+        console.log("Min Heap: ",minHeapObj1);
+        console.log("Max Heap: ",maxHeapObj2);
+        console.log("Min Heap: ",minHeapObj2);
 ```
