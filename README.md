@@ -32,6 +32,7 @@ Type can accept two values 1(for Max Heap) or 2(for Min Heap).
 
 Then...
 
+## How to use ?
 ```
     import BinaryHeap from 'byheap';
 
@@ -47,11 +48,75 @@ Then...
     # Or ...
         let arr3 = [4,2,3,5,1,6,7,11,10]  
         
-        let maxHeapObj1   = new BinaryHeap(arr2,1);
-        let minHeapObj1 = new BinaryHeap(arr2,2);
+        let maxHeapObj2   = new BinaryHeap(arr2,1);
+        let minHeapObj2 = new BinaryHeap(arr2,2);
     
         console.log("Max Heap: ",maxHeapObj1);
         console.log("Min Heap: ",minHeapObj1);
         console.log("Max Heap: ",maxHeapObj2);
         console.log("Min Heap: ",minHeapObj2);
+```
+Output..
+```
+
+Max Heap:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 11 },
+     { key: 10 },
+     { key: 6 },
+     { key: 7 },
+     { key: 1 },
+     { key: 3 },
+     { key: 4 },
+     { key: 5 },
+     { key: 2 } ],
+  type: 1 }
+Min Heap:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 1 },
+     { key: 4 },
+     { key: 3 },
+     { key: 5 },
+     { key: 2 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  type: 2 }
+Max Heap:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  nodeType: 'string',
+  draftBT: [ 4, 2, 3, 5, 1, 6, 7, 11, 10 ],
+  resHeap: [ '11', '10', '6', '7', '1', '3', '4', '5', '2' ],
+  type: 1 }
+Min Heap:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  nodeType: 'string',
+  draftBT: [ 4, 2, 3, 5, 1, 6, 7, 11, 10 ],
+  resHeap: [ '1', '4', '3', '5', '2', '6', '7', '11', '10' ],
+  type: 2 }
 ```
