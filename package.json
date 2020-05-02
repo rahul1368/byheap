@@ -1,5 +1,5 @@
 {
-  "name": "Binary Heap Module",
+  "name": "binaryheap",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
