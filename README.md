@@ -39,6 +39,11 @@ Arr[(2*i)+2]	Returns the right child node
 
 This implementation supports **max heap and min heap** both.
 
+BinaryHeap also provide following methods :
+
+* insert : it accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor
+* updateKey : it accepts two parameter(i.e newItem , position) and returns updated BinaryHeap Object with type provided in constructor
+
 ## Params for BinaryHeap constructor?
 
     * BinaryHeap constructor accepts two parameters (List<...node>,type).
