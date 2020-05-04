@@ -72,6 +72,20 @@ Then...
         console.log("Min Heap: ",minHeapObj1);
         console.log("Max Heap: ",maxHeapObj2);
         console.log("Min Heap: ",minHeapObj2);
+
+    # Inserting new item ...
+        maxHeapObj1.insert({key:23})   // Params (newItem)
+        minHeapObj1.insert({key:23})
+
+        console.log("Max Heap After Insertion: ",maxHeapObj1);
+        console.log("Min Heap After Insertion: ",minHeapObj1);
+
+    # Updating an item ... 
+        maxHeapObj1.updateKey({key:13},1)   // Params (newItem,position)
+        minHeapObj1.updateKey({key:13},3)  
+
+        console.log("Max Heap After Updation: ",maxHeapObj1);
+        console.log("Min Heap After Updation: ",minHeapObj1);    
 ```
 Output..
 ```
@@ -137,7 +151,116 @@ Min Heap:  BinaryHeap {
   resHeap: [ '1', '4', '3', '5', '2', '6', '7', '11', '10' ],
   type: 2 }
 
+Max Heap After Insertion:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 23 },
+     { key: 11 },
+     { key: 6 },
+     { key: 7 },
+     { key: 10 },
+     { key: 3 },
+     { key: 4 },
+     { key: 5 },
+     { key: 2 },
+     { key: 1 } ],
+  heapSize: 10,
+  type: 1 }
+Min Heap After Insertion:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 1 },
+     { key: 4 },
+     { key: 3 },
+     { key: 5 },
+     { key: 2 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 },
+     { key: 23 } ],
+  heapSize: 10,
+  type: 2 }
+Max Heap After Updation:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 23 },
+     { key: 13 },
+     { key: 6 },
+     { key: 7 },
+     { key: 10 },
+     { key: 3 },
+     { key: 4 },
+     { key: 5 },
+     { key: 2 },
+     { key: 1 } ],
+  heapSize: 10,
+  type: 1 }
+Min Heap After Updation:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 1 },
+     { key: 4 },
+     { key: 3 },
+     { key: 10 },
+     { key: 2 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 13 },
+     { key: 23 } ],
+  heapSize: 10,
+  type: 2 }
+
   BinaryHeap.resHeap ==> Resulted Binary Heap
-  BinaryHeap.draftBT ==> Input Binary Tree
+  BinaryHeap.draftBT ==> Input Binary Tree (provided in constructor)
   BinaryHeap.type ==> 1 ( for MAX_HEAP ) or 2 ( for MIN_HEAP )
 ```
