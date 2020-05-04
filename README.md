@@ -89,9 +89,9 @@ This implementation supports **max heap and min heap** both.
 
 * **[sort](https://en.wikipedia.org/wiki/Heapsort)** < order > : accepts one parameter order ( 1 for increasing and 2 for decreasing order) and returns a sorted list of heap items.This operation does not mutates heap.
 
-    **Method Signature: ** List< item > sort(order)
+    **Method Signature:** List< item > sort(order)
     
-    **order** value can be 1 or 2.it's default value is 1 if not provided.
+    Here **order** value can be 1 (for increasing order) or 2 (for decreasing order). It's default value is 1 if not provided.
 
 **( ...more methods are coming soon )**
 
