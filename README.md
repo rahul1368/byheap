@@ -65,12 +65,12 @@ This implementation supports **max heap and min heap** both.
 **[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) also provide following methods till now :**
 
 * **[insert](https://en.wikipedia.org/wiki/Binary_heap)** < newItem > : it accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor    
-    ** **Method Signature : BinaryHeap insert(newItem)**
+** **Method Signature : BinaryHeap insert(newItem)**
     Here newItem could be a object with a special attribute named key(with value number) or a number or a number represented as string
     **Example : newItem = {key:2,...} or 2 or '2'**
 
 * **updateKey** < newItem , position > : it accepts two parameter(i.e newItem , position) and returns updated BinaryHeap Object with type provided in constructor
-    ** **Method Signature : BinaryHeap updateKey(newItem,position)**
+** **Method Signature : BinaryHeap updateKey(newItem,position)**
     **Here postion will be a integer with satisfying following condition:**
     
     **0 <= position < BinaryHeap Size**
