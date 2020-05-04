@@ -6,9 +6,9 @@ This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://en
 
 A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with following properties.
 
-* 1) It’s a complete tree (All levels are completely filled except possibly the last level and the last level has all keys as left as possible). This property of Binary Heap makes them suitable to be stored in an array.
+* 1) It’s a complete tree (**All levels are completely filled except possibly the last level and the last level has all keys as left as possible**). This property of Binary Heap makes them suitable to be stored in an array.
 
-* 2) A Binary Heap is either Min Heap or Max Heap. In a Min Binary Heap, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
+* 2) A Binary Heap is either Min Heap or Max Heap. In a **Min Binary Heap**, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
 
 ## Examples of Min Heap:
 
@@ -33,6 +33,7 @@ Arr[(i-1)/2]	Returns the parent node
 Arr[(2*i)+1]	Returns the left child node
 Arr[(2*i)+2]	Returns the right child node
 
+```
 The traversal method use to achieve Array representation is **Level Order**
 
 ![Level Order](https://media.geeksforgeeks.org/wp-content/uploads/HeapRepresentation-1.png)
@@ -44,7 +45,6 @@ The Ordering can be of two types:
 
 Examples:
 
-```
 ## Installation
 
 `npm i byheap --save`
