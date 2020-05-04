@@ -1,12 +1,14 @@
 ## What is this ?
 
-This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://www.geeksforgeeks.org/binary-heap/).
+This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://en.wikipedia.org/wiki/Binary_heap) or [here..](https://www.geeksforgeeks.org/binary-heap/) .
 
-##  Binary Heap
-    * A Binary Heap is a Binary Tree with following properties.
-        ** 1) It’s a complete tree (All levels are completely filled except possibly the last level and the last level has all keys as left as possible). This property of Binary Heap makes them suitable to be stored in an array.
+##  [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
 
-        ** 2) A Binary Heap is either Min Heap or Max Heap. In a Min Binary Heap, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
+A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with following properties.
+
+* 1) It’s a complete tree (All levels are completely filled except possibly the last level and the last level has all keys as left as possible). This property of Binary Heap makes them suitable to be stored in an array.
+
+* 2) A Binary Heap is either Min Heap or Max Heap. In a Min Binary Heap, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
 
 ## Examples of Min Heap:
 
@@ -22,8 +24,8 @@ This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://ww
     
     A and B both are examples of min heap.
  
-## How is Binary Heap represented?
-``` A Binary Heap is a Complete Binary Tree. A binary heap is typically represented as an array.
+## How is [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) represented?
+``` A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Complete Binary Tree. A binary heap is typically represented as an array.
 
 The root element will be at Arr[0].
 Below table shows indexes of other nodes for the ith node, i.e., Arr[i]:
@@ -39,17 +41,18 @@ Arr[(2*i)+2]	Returns the right child node
 
 This implementation supports **max heap and min heap** both.
 
-BinaryHeap also provide following methods :
+**[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) also provide following methods :**
 
-* insert : it accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor
+* [insert](https://en.wikipedia.org/wiki/Binary_heap) : it accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor
+
 * updateKey : it accepts two parameter(i.e newItem , position) and returns updated BinaryHeap Object with type provided in constructor
 
-## Params for BinaryHeap constructor?
+## Params for [BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor?
 
-    * BinaryHeap constructor accepts two parameters (List<...node>,type).
-        ** First parameter is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
-        ** Second Parameter : Type of Binary Heap ==> Max Heap or Min Heap
-        ** Type can accept two values 1(for Max Heap) or 2(for Min Heap).
+* [BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List<...node>,type).
+    ** First parameter is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
+    ** Second Parameter : Type of Binary Heap ==> Max Heap or Min Heap
+    ** Type can accept two values 1(for Max Heap) or 2(for Min Heap).
 
 
 Then...
