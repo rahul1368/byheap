@@ -65,19 +65,19 @@ This implementation supports **max heap and min heap** both.
 **[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) also provide following methods till now :**
 
 * **[insert](https://en.wikipedia.org/wiki/Binary_heap)** < newItem > : it accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor    
-**Method Signature : BinaryHeap insert(newItem)**
+    **Method Signature :** BinaryHeap insert(newItem)
 
-Here newItem could be a object with a special attribute named key(with value number) or a number or a number represented as string
+    Here newItem could be a object with a special attribute named key(with value number) or a number or a number represented as string
 
-**Example : newItem = {key:2,...} or 2 or '2'**
+    **Example : newItem = {key:2,...} or 2 or '2'**
 
 * **updateKey** < newItem , position > : it accepts two parameter(i.e newItem , position) and returns updated BinaryHeap Object with type provided in constructor
 
-**Method Signature : BinaryHeap updateKey(newItem,position)**
+    **Method Signature :** BinaryHeap updateKey(newItem,position)
     
-**Here postion will be a integer with satisfying following condition:**
+    **Here postion will be a integer with satisfying following condition:**
     
-**0 <= position < BinaryHeap Size**
+    **0 <= position < BinaryHeap Size**
 
 **( ...more are coming soon )**
 
@@ -86,12 +86,17 @@ Here newItem could be a object with a special attribute named key(with value num
 
 **[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List<...node>,type).**
 
-* **First parameter** is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
+* **First parameter** is a list of items (nodes) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
 
 * **Second Parameter** is type of Binary Heap i.e. Max Heap or Min Heap
 
 * **Type** can accept two values 1 (for Max Heap) or 2 (for Min Heap).
 
+    **Constructor Signature :** BinaryHeap(List<item>,type) 
+    
+    Here item could be a object with a special attribute named key(with value number) or a number or a number represented as string
+
+    **Example : item = {key:2,...} or 2 or '2'**
 
 **Then...**
 
