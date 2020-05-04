@@ -72,14 +72,14 @@ This implementation supports **max heap and min heap** both.
 
 **[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List<...node>,type).**
 
-* First parameter is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
+* **First parameter** is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
 
-* Second Parameter : Type of Binary Heap i.e. Max Heap or Min Heap
+* **Second Parameter** is type of Binary Heap i.e. Max Heap or Min Heap
 
-* Type can accept two values 1 (for Max Heap) or 2 (for Min Heap).
+* **Type** can accept two values 1 (for Max Heap) or 2 (for Min Heap).
 
 
-Then...
+**Then...**
 
 ## How to use ?
 ```
