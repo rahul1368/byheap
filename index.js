@@ -153,7 +153,7 @@
       }
     }
     getKey(item){
-      return (this.nodeType == typeof {}) ? parseInt(item.key) : (this.nodeType == typeof "" || this.nodeType == typeof 0) ? parseInt(item) : NaN
+      return (this.nodeType == typeof {}) ? parseFloat(item.key) : (this.nodeType == typeof "" || this.nodeType == typeof 0) ? parseFloat(item) : NaN
     }
     updateKey(newItem,position){
       try {
