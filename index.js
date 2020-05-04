@@ -51,8 +51,8 @@
     /*@ Return true if heap property is voilated */
     isHeapPropertyVoilated(cI,pI){
       try{
-        let a = (this.nodeType == typeof {}) ? this.resHeap[pI].key : (this.nodeType == typeof "" || this.nodeType == typeof 0) ? parseInt(this.resHeap[pI]) : NaN
-        let b = (this.nodeType == typeof {}) ? this.resHeap[cI].key : (this.nodeType == typeof "" || this.nodeType == typeof 0) ? parseInt(this.resHeap[cI]) : NaN
+        let a = this.getKey(this.resHeap[pI])
+        let b = this.getKey(this.resHeap[cI])
         if(isNaN(a) || isNaN(b)){
           throw("Error: Input tree node are not comparable!")
         }else{
@@ -86,8 +86,8 @@
       if(leftChildVoilationFlag && rightChildVoilationFlag){
         //Check from whom parent should be swapped
         //a and b are left and right node values respectively
-        let a = (this.nodeType == typeof {}) ? this.resHeap[lI].key : (this.nodeType == typeof "" || this.nodeType == typeof 0) ? parseInt(this.resHeap[lI]) : NaN
-        let b = (this.nodeType == typeof {}) ? this.resHeap[rI].key : (this.nodeType == typeof "" || this.nodeType == typeof 0) ? parseInt(this.resHeap[rI]) : NaN
+        let a = this.getKey(this.resHeap[lI])
+        let b = this.getKey(this.resHeap[rI])
         if(this.type == this.BINARY_HEAP_IDENTIFIER.MAX_HEAP){
           swapNode = (a > b) ? this.NODE_IDENTIFIER.LEFT : this.NODE_IDENTIFIER.RIGHT
           cI = (a > b) ? lI : rI
