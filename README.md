@@ -32,6 +32,18 @@ Below table shows indexes of other nodes for the ith node, i.e., Arr[i]:
 Arr[(i-1)/2]	Returns the parent node
 Arr[(2*i)+1]	Returns the left child node
 Arr[(2*i)+2]	Returns the right child node
+
+The traversal method use to achieve Array representation is **Level Order**
+
+![Level Order](https://media.geeksforgeeks.org/wp-content/uploads/HeapRepresentation-1.png)
+
+**Binary Heap satisfies the Ordering Property.**
+
+The Ordering can be of two types:
+1. Min Heap Property: The value of each node is greater than or equal to the value of its parent, with the minimum value at the root.
+
+Examples:
+
 ```
 ## Installation
 
