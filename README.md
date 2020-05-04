@@ -10,7 +10,7 @@ A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with
 
 * A Binary Heap is either Min Heap or Max Heap. In a **Min Binary Heap**, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
 
-## Examples of Min Heap:
+## [Examples of Min Heap](https://en.wikipedia.org/wiki/Binary_heap):
 
     List representing binary tree A: [10,20,100,30]  // In order traversal of tree left to right
     List representing binary tree B: [10,15,30,40,50,100,40] // In order traversal of tree left to right
@@ -24,7 +24,7 @@ A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with
     
     A and B both are examples of min heap.
  
-## [How is [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) represented?](https://www.geeksforgeeks.org/array-representation-of-binary-heap/?ref=rp)
+## [How is Binary Heap represented?](https://www.geeksforgeeks.org/array-representation-of-binary-heap/?ref=rp)
 ``` A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Complete Binary Tree. A binary heap is typically represented as an array.
 
 The root element will be at Arr[0].
