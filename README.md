@@ -64,7 +64,7 @@ This implementation supports **max heap and min heap** both.
 
 **[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) also provide following methods till now :**
 
-* **[insert](https://en.wikipedia.org/wiki/Binary_heap)** < newItem > : accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor    
+* **[insert](https://en.wikipedia.org/wiki/Binary_heap#Insert)** < newItem > : accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor    
     **Method Signature :** BinaryHeap insert(newItem)
 
     Here **newItem** could be a **object with a special attribute named key(with value number)** or a **number** or **a number represented as string**
@@ -79,12 +79,26 @@ This implementation supports **max heap and min heap** both.
     
     **0 <= position < BinaryHeap Size**
 
+* **[extract](https://en.wikipedia.org/wiki/Binary_heap#Extract)** : The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap (also known as bubble-down, percolate-down, sift-down, sink-down, trickle down, heapify-down, cascade-down, and extract-min/max).
+
+    **Method Signature :** item extract()
+
+    Here **item** will **maximum key item and minimum key item** in case of **max heap and min heap** respectively.
+
+    **Note :** After **extract operation heap root element will be deleted** and heap will **reorganize itself to maintain heap property.**
+
+* **[sort](https://en.wikipedia.org/wiki/Heapsort)** < order > : accepts one parameter order ( 1 for increasing and 2 for decreasing order) and returns a sorted list of heap items.This operation does not mutates heap.
+
+    **Method Signature: ** List< item > sort(order)
+    
+    **order** value can be 1 or 2.it's default value is 1 if not provided.
+
 **( ...more methods are coming soon )**
 
 
 ## Params for [BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor?
 
-**[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List<...node>,type).**
+**[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List< item >,type).**
 
 * **First parameter** is a list of items (nodes) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
 
@@ -119,30 +133,19 @@ This implementation supports **max heap and min heap** both.
         let maxHeapObj2   = new BinaryHeap(arr2,1);
         let minHeapObj2 = new BinaryHeap(arr2,2);
     
-        console.log("Max Heap: ",maxHeapObj1);
-        console.log("Min Heap: ",minHeapObj1);
-        console.log("Max Heap: ",maxHeapObj2);
-        console.log("Min Heap: ",minHeapObj2);
-
-    # Inserting new item ...
-        maxHeapObj1.insert({key:23})   // Params (newItem)
-        minHeapObj1.insert({key:23})
-
-        console.log("Max Heap After Insertion: ",maxHeapObj1);
-        console.log("Min Heap After Insertion: ",minHeapObj1);
-
-    # Updating an item ... 
-        maxHeapObj1.updateKey({key:13},1)   // Params (newItem,position)
-        minHeapObj1.updateKey({key:13},3)  
-
-        console.log("Max Heap After Updation: ",maxHeapObj1);
-        console.log("Min Heap After Updation: ",minHeapObj1);    
+        console.log("Max Heap 1 (items as object): ",maxHeapObj1);
+        console.log("Min Heap 1 (items as object): ",minHeapObj1);
+        console.log("Max Heap 2 (items as numbers): ",maxHeapObj2);
+        console.log("Min Heap 2 (items as numbers): ",minHeapObj2);
+   
 ```
 Output..
 ```
 
-Max Heap:  BinaryHeap {
+Max Heap 1 (items as object):  BinaryHeap {
   BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -157,16 +160,19 @@ Max Heap:  BinaryHeap {
   resHeap:
    [ { key: 11 },
      { key: 10 },
-     { key: 6 },
      { key: 7 },
+     { key: 5 },
      { key: 1 },
+     { key: 6 },
      { key: 3 },
      { key: 4 },
-     { key: 5 },
      { key: 2 } ],
+  heapSize: 9,
   type: 1 }
-Min Heap:  BinaryHeap {
+Min Heap 1 (items as object):  BinaryHeap {
   BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -180,138 +186,306 @@ Min Heap:  BinaryHeap {
      { key: 10 } ],
   resHeap:
    [ { key: 1 },
-     { key: 4 },
+     { key: 2 },
      { key: 3 },
      { key: 5 },
-     { key: 2 },
+     { key: 4 },
      { key: 6 },
      { key: 7 },
      { key: 11 },
      { key: 10 } ],
+  heapSize: 9,
   type: 2 }
-Max Heap:  BinaryHeap {
+Max Heap 2 (items as numbers):  BinaryHeap {
   BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'string',
   draftBT: [ 4, 2, 3, 5, 1, 6, 7, 11, 10 ],
-  resHeap: [ '11', '10', '6', '7', '1', '3', '4', '5', '2' ],
+  resHeap: [ '11', '10', '7', '5', '1', '6', '3', '4', '2' ],
+  heapSize: 9,
   type: 1 }
-Min Heap:  BinaryHeap {
+Min Heap 2 (items as numbers):  BinaryHeap {
   BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'string',
   draftBT: [ 4, 2, 3, 5, 1, 6, 7, 11, 10 ],
-  resHeap: [ '1', '4', '3', '5', '2', '6', '7', '11', '10' ],
+  resHeap: [ '1', '2', '3', '5', '4', '6', '7', '11', '10' ],
+  heapSize: 9,
   type: 2 }
 
-Max Heap After Insertion:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  nodeType: 'object',
-  draftBT:
-   [ { key: 4 },
-     { key: 2 },
-     { key: 3 },
-     { key: 5 },
-     { key: 1 },
-     { key: 6 },
-     { key: 7 },
-     { key: 11 },
-     { key: 10 } ],
-  resHeap:
-   [ { key: 23 },
-     { key: 11 },
-     { key: 6 },
-     { key: 7 },
-     { key: 10 },
-     { key: 3 },
-     { key: 4 },
-     { key: 5 },
-     { key: 2 },
-     { key: 1 } ],
-  heapSize: 10,
-  type: 1 }
-Min Heap After Insertion:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  nodeType: 'object',
-  draftBT:
-   [ { key: 4 },
-     { key: 2 },
-     { key: 3 },
-     { key: 5 },
-     { key: 1 },
-     { key: 6 },
-     { key: 7 },
-     { key: 11 },
-     { key: 10 } ],
-  resHeap:
-   [ { key: 1 },
-     { key: 4 },
-     { key: 3 },
-     { key: 5 },
-     { key: 2 },
-     { key: 6 },
-     { key: 7 },
-     { key: 11 },
-     { key: 10 },
-     { key: 23 } ],
-  heapSize: 10,
-  type: 2 }
-Max Heap After Updation:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  nodeType: 'object',
-  draftBT:
-   [ { key: 4 },
-     { key: 2 },
-     { key: 3 },
-     { key: 5 },
-     { key: 1 },
-     { key: 6 },
-     { key: 7 },
-     { key: 11 },
-     { key: 10 } ],
-  resHeap:
-   [ { key: 23 },
-     { key: 13 },
-     { key: 6 },
-     { key: 7 },
-     { key: 10 },
-     { key: 3 },
-     { key: 4 },
-     { key: 5 },
-     { key: 2 },
-     { key: 1 } ],
-  heapSize: 10,
-  type: 1 }
-Min Heap After Updation:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  nodeType: 'object',
-  draftBT:
-   [ { key: 4 },
-     { key: 2 },
-     { key: 3 },
-     { key: 5 },
-     { key: 1 },
-     { key: 6 },
-     { key: 7 },
-     { key: 11 },
-     { key: 10 } ],
-  resHeap:
-   [ { key: 1 },
-     { key: 4 },
-     { key: 3 },
-     { key: 10 },
-     { key: 2 },
-     { key: 6 },
-     { key: 7 },
-     { key: 11 },
-     { key: 13 },
-     { key: 23 } ],
-  heapSize: 10,
-  type: 2 }
 
   BinaryHeap.resHeap i.e. Resulted Binary Heap
   BinaryHeap.draftBT i.e. Input Binary Tree (provided in constructor)
   BinaryHeap.type i.e. 1 ( for MAX_HEAP ) or 2 ( for MIN_HEAP )
+```
+# How to use insert method ? 
+
+```
+    # Inserting new item ...
+        maxHeapObj1.insert({key:23})   // Params (newItem)
+        minHeapObj1.insert({key:23})
+
+        console.log("Max Heap 1 After Insertion: ",maxHeapObj1);
+        console.log("Min Heap 1 After Insertion: ",minHeapObj1);
+```
+Output ...
+```
+Max Heap 1 After Insertion:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 23 },
+     { key: 11 },
+     { key: 7 },
+     { key: 5 },
+     { key: 10 },
+     { key: 6 },
+     { key: 3 },
+     { key: 4 },
+     { key: 2 },
+     { key: 1 } ],
+  heapSize: 10,
+  type: 1 }
+Min Heap 1 After Insertion:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 1 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 4 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 },
+     { key: 23 } ],
+  heapSize: 10,
+  type: 2 }
+
+```
+# How to use updateKey method ? 
+```
+    # Updating an item ... 
+        maxHeapObj1.updateKey({key:13},1)   // Params (newItem,position)
+        minHeapObj1.updateKey({key:13},3)  
+
+        console.log("Max Heap 1 After Updation: ",maxHeapObj1);
+        console.log("Min Heap 1 After Updation: ",minHeapObj1); 
+```
+
+Output ...
+
+```
+Max Heap 1 After Updation:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 23 },
+     { key: 13 },
+     { key: 7 },
+     { key: 5 },
+     { key: 10 },
+     { key: 6 },
+     { key: 3 },
+     { key: 4 },
+     { key: 2 },
+     { key: 1 } ],
+  heapSize: 10,
+  type: 1 }
+Min Heap 1 After Updation:  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 1 },
+     { key: 2 },
+     { key: 3 },
+     { key: 10 },
+     { key: 4 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 13 },
+     { key: 23 } ],
+  heapSize: 10,
+  type: 2 }
+
+```
+
+# How to use extract method ?
+```
+    let extractMax = maxHeapObj1.extract()
+    let extractMin = minHeapObj1.extract()
+
+    console.log("Extracted node from Max Heap 1 : ",extractMax)
+    console.log("Max Heap 1 after extraction : ",maxHeapObj1)
+    console.log("Extracted node from Min Heap 1 : ",extractMin)
+    console.log("Min Heap 1 after extraction : ",minHeapObj1)
+```
+
+Output ...
+
+```
+Extracted node from Max Heap 1 :  { key: 23 }
+
+Max Heap 1 after extraction :  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 13 },
+     { key: 10 },
+     { key: 7 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 3 },
+     { key: 4 },
+     { key: 2 } ],
+  heapSize: 9,
+  type: 1 }
+
+Extracted node from Min Heap 1 :  { key: 1 }
+
+Min Heap 1 after extraction :  BinaryHeap {
+  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
+  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
+  SORT_ORDER: { INC: 1, DEC: 2 },
+  nodeType: 'object',
+  draftBT:
+   [ { key: 4 },
+     { key: 2 },
+     { key: 3 },
+     { key: 5 },
+     { key: 1 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 10 } ],
+  resHeap:
+   [ { key: 2 },
+     { key: 4 },
+     { key: 3 },
+     { key: 10 },
+     { key: 23 },
+     { key: 6 },
+     { key: 7 },
+     { key: 11 },
+     { key: 13 } ],
+  heapSize: 9,
+  type: 2 }
+
+
+```
+# How to use sort (i.e. heapsort) ?
+
+```
+    console.log("Max Heap 1 objects list , sorted in increasing order ",maxHeapObj1.sort(1))
+    console.log("Max Heap 1 objects list , sorted in decreasing order ",maxHeapObj1.sort(2))
+    console.log("Min Heap 1 objects list , sorted in increasing order ",minHeapObj1.sort(1))
+    console.log("Min Heap 1 objects list , sorted in decreasing order ",minHeapObj1.sort(2))
+```
+
+Output ...
+
+```
+Max Heap 1 objects list , sorted in increasing order  [ { key: 1 },
+  { key: 2 },
+  { key: 3 },
+  { key: 4 },
+  { key: 5 },
+  { key: 6 },
+  { key: 7 },
+  { key: 10 },
+  { key: 13 } ]
+Max Heap 1 objects list , sorted in decreasing order  [ { key: 13 },
+  { key: 10 },
+  { key: 7 },
+  { key: 6 },
+  { key: 5 },
+  { key: 4 },
+  { key: 3 },
+  { key: 2 },
+  { key: 1 } ]
+Min Heap 1 objects list , sorted in increasing order  [ { key: 2 },
+  { key: 3 },
+  { key: 4 },
+  { key: 6 },
+  { key: 7 },
+  { key: 10 },
+  { key: 11 },
+  { key: 13 },
+  { key: 23 } ]
+Min Heap 1 objects list , sorted in decreasing order  [ { key: 23 },
+  { key: 13 },
+  { key: 11 },
+  { key: 10 },
+  { key: 7 },
+  { key: 6 },
+  { key: 4 },
+  { key: 3 },
+  { key: 2 } ]
+
+
 ```

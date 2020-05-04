@@ -8,6 +8,9 @@
         LEFT:1,
         RIGHT:1
       }
+      this.SORT_ORDER = {
+        INC:1,DEC:2
+      }
       try {
         if(inputBT && inputBT.length){
           this.nodeType = typeof inputBT[0]
@@ -51,6 +54,8 @@
     /*@ Return true if heap property is voilated */
     isHeapPropertyVoilated(cI,pI){
       try{
+        // child index is out from the heap 
+        if(cI >= this.heapSize ) return false
         let a = this.getKey(this.resHeap[pI])
         let b = this.getKey(this.resHeap[cI])
         if(isNaN(a) || isNaN(b)){
@@ -79,10 +84,13 @@
     }
     /* @ Return the index of left and right child of a node whose index is pI */
     calcChildIndex(pI){
+      let swapNode = NaN,cI = NaN;
+      let pLimit = (this.heapSize % 2 == 0) ? parseInt((this.heapSize-2)/2) : parseInt((this.heapSize-1)/2)
+      if(pI > pLimit) return cI
       let lI = (2*pI+1),rI = (2*pI+2)
+      if(lI >= this.heapSize && rI >= this.heapSize) return cI
       let leftChildVoilationFlag = this.isHeapPropertyVoilated(lI,pI)
       let rightChildVoilationFlag = this.isHeapPropertyVoilated(rI,pI)
-      let swapNode = NaN,cI = NaN;
       if(leftChildVoilationFlag && rightChildVoilationFlag){
         //Check from whom parent should be swapped
         //a and b are left and right node values respectively
@@ -108,6 +116,7 @@
       }
       return cI
     }
+    /* This method assumes that subtree rooted at cI is already a heap, so checks from cI to root if a swap is required */
     heapifyBottomToTop(cI){
       let pI = this.calcParentIndex(cI)
       while (pI >= 0 && this.isHeapPropertyVoilated(cI,pI)) {
@@ -118,6 +127,7 @@
         pI = this.calcParentIndex(cI)
       }
     }
+    /*This method assumes that entire subtree other than the subtree rooted at pI is already a heap, so convert subtree rooted at pI to heap */
     heapifyTopToBottom(pI){
       let cI = this.calcChildIndex(pI)
       let pLimit = (this.heapSize % 2 == 0) ? parseInt((this.heapSize-2)/2) : parseInt((this.heapSize-1)/2)
@@ -132,8 +142,9 @@
     }
     makeHeap() {
       let n = this.heapSize
-      for (let i = parseInt(n / 2); i < n; i++) {
-        this.heapifyBottomToTop(i)
+      for (let i = parseInt(n / 2); i >=0; i--) {
+        //Heapify all internal nodes , because leaf node's are already heap
+        this.heapifyTopToBottom(i)
       }
     }
     testItem(item){
@@ -186,6 +197,50 @@
         console.log(error)
       }
     }
+
+    extract(){
+      try {
+        if(this.heapSize > 0){
+          let extractedNode = this.resHeap[0]
+          this.swap(0,this.heapSize-1)
+          this.resHeap = this.resHeap.slice(0,this.heapSize-1)
+          this.heapSize -= 1
+          this.heapifyTopToBottom(0)
+          return extractedNode
+        }else{
+          throw("Error: Nothing to extract ,heap is empty!")
+        }
+      } catch (e) {
+        console.log(e)
+      }     
+    }
+    sort(order = this.SORT_ORDER.INC){
+      try{
+        let sortedList = []
+        let n = this.heapSize
+        let oldHeapCopy = JSON.parse(JSON.stringify(this.resHeap))
+        for(let i=0;i<n;i++){
+          let extractedNode = this.extract()
+          sortedList.push(extractedNode)
+        }
+        this.resHeap = oldHeapCopy
+        this.heapSize = n
+        if(this.type == this.BINARY_HEAP_IDENTIFIER.MAX_HEAP){
+          if(order == this.SORT_ORDER.INC){
+            return sortedList.reverse()
+          }else{
+            return sortedList
+          }
+        }else{
+          if(order == this.SORT_ORDER.DEC){
+            return sortedList.reverse()
+          }else{
+            return sortedList
+          }
+        }
+      }catch(e){
+        console.log(e)
+      }
+    }
   }
   module.exports = BinaryHeap
-  
