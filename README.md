@@ -70,10 +70,13 @@ This implementation supports **max heap and min heap** both.
 
 ## Params for [BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor?
 
-* [BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List<...node>,type).
-    ** First parameter is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
-    ** Second Parameter : Type of Binary Heap ==> Max Heap or Min Heap
-    ** Type can accept two values 1(for Max Heap) or 2(for Min Heap).
+**[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List<...node>,type).**
+
+* First parameter is a list of keys(integers) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
+
+* Second Parameter : Type of Binary Heap i.e. Max Heap or Min Heap
+
+* Type can accept two values 1 (for Max Heap) or 2 (for Min Heap).
 
 
 Then...
@@ -289,7 +292,7 @@ Min Heap After Updation:  BinaryHeap {
   heapSize: 10,
   type: 2 }
 
-  BinaryHeap.resHeap ==> Resulted Binary Heap
-  BinaryHeap.draftBT ==> Input Binary Tree (provided in constructor)
-  BinaryHeap.type ==> 1 ( for MAX_HEAP ) or 2 ( for MIN_HEAP )
+  BinaryHeap.resHeap i.e. Resulted Binary Heap
+  BinaryHeap.draftBT i.e. Input Binary Tree (provided in constructor)
+  BinaryHeap.type i.e. 1 ( for MAX_HEAP ) or 2 ( for MIN_HEAP )
 ```
