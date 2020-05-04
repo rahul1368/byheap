@@ -6,9 +6,9 @@ This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://en
 
 A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with following properties.
 
-* 1) It’s a complete tree (**All levels are completely filled except possibly the last level and the last level has all keys as left as possible**). This property of Binary Heap makes them suitable to be stored in an array.
+* It’s a complete tree (**All levels are completely filled except possibly the last level and the last level has all keys as left as possible**). This property of Binary Heap makes them suitable to be stored in an array.
 
-* 2) A Binary Heap is either Min Heap or Max Heap. In a **Min Binary Heap**, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
+* A Binary Heap is either Min Heap or Max Heap. In a **Min Binary Heap**, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
 
 ## Examples of Min Heap:
 
@@ -24,7 +24,7 @@ A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with
     
     A and B both are examples of min heap.
  
-## How is [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) represented?
+## [How is [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) represented?](https://www.geeksforgeeks.org/array-representation-of-binary-heap/?ref=rp)
 ``` A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Complete Binary Tree. A binary heap is typically represented as an array.
 
 The root element will be at Arr[0].
@@ -41,9 +41,18 @@ The traversal method use to achieve Array representation is **Level Order**
 **Binary Heap satisfies the Ordering Property.**
 
 The Ordering can be of two types:
-1. Min Heap Property: The value of each node is greater than or equal to the value of its parent, with the minimum value at the root.
+1. **Min Heap Property:** The value of each node is greater than or equal to the value of its parent, with the minimum value at the root.
 
 Examples:
+
+![Min Heap](https://media.geeksforgeeks.org/wp-content/uploads/HeapRepresentation.png)
+
+2. **Max Heap Property:** The value of each node is less than or equal to the value of its parent, with the maximum value at the root.
+
+Examples:
+
+![Max Heap](https://media.geeksforgeeks.org/wp-content/uploads/MaxHeap.png)
+
 
 ## Installation
 
