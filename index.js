@@ -27,7 +27,7 @@
                   throw("List item should be either a number or an object with attribute named key!")
                 }else{
                   // item is number
-                  let key = parseInt(obj)
+                  let key = parseFloat(obj)
                   this.draftBT.push(key)
                 }
               }
