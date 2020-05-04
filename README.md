@@ -62,7 +62,7 @@ Examples:
 
 This implementation supports **max heap and min heap** both.
 
-**[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) also provide following methods :**
+**[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) also provide following methods till now (...more are coming soon) :**
 
 * [insert](https://en.wikipedia.org/wiki/Binary_heap) : it accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor
 
