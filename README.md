@@ -1,6 +1,6 @@
 ## What is this ?
 
-This is es6 implementation for [Binary Heap(Max/Min) data structure!](https://en.wikipedia.org/wiki/Binary_heap) or [here..](https://www.geeksforgeeks.org/binary-heap/) .
+This is ES6 implementation for [Binary Heap(Max/Min)](https://en.wikipedia.org/wiki/Binary_heap) or [here](https://www.geeksforgeeks.org/binary-heap/) data structure!.
 
 ##  [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
 
@@ -8,7 +8,7 @@ A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with
 
 * It’s a complete tree (**All levels are completely filled except possibly the last level and the last level has all keys as left as possible**). This property of Binary Heap makes them suitable to be stored in an array.
 
-* A Binary Heap is either Min Heap or Max Heap. In a **Min Binary Heap**, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
+* A Binary Heap is either **Min Heap or Max Heap**. In a **Min Binary Heap**, the key at root must be minimum among all keys present in Binary Heap. The same property must be recursively true for all nodes in Binary Tree. Max Binary Heap is similar to MinHeap.
 
 ## [Examples of Min Heap](https://en.wikipedia.org/wiki/Binary_heap):
 
