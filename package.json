@@ -1,6 +1,6 @@
 {
   "name": "byheap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ES6 implementation of Binary Heap data structure",
   "main": "index.js",
   "scripts": {
