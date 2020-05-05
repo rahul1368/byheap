@@ -1,6 +1,6 @@
 {
   "name": "byheap",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "ES6 implementation of Binary Heap data structure",
   "main": "lib/index.js",
   "scripts": {
@@ -13,13 +13,14 @@
   "keywords": [
     "npm",
     "es6",
+    "priority queue",
+    "heap",
     "binary heap",
     "max heap",
     "min heap",
     "heapsort",
     "extract min",
     "extract max",
-    "heap",
     "data structure"
   ],
   "author": "Rahul Choudhary <ragulchoudhary666666@gmail.com>",
