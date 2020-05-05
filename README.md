@@ -25,10 +25,8 @@ A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Binary Tree with
     A and B both are examples of min heap.
  
 ## [How is Binary Heap represented?](https://www.geeksforgeeks.org/array-representation-of-binary-heap/?ref=rp)
-``` 
-
 A [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) is a Complete Binary Tree. A binary heap is typically represented as an array.
-
+```
 The root element will be at Arr[0].
 Below table shows indexes of other nodes for the ith node, i.e., Arr[i]:
 Arr[(i-1)/2]	Returns the parent node
