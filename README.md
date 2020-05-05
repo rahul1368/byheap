@@ -1,6 +1,6 @@
 ## What is this ?
 
-This is ES6 implementation for [Binary Heap(Max/Min)](https://en.wikipedia.org/wiki/Binary_heap) or [here](https://www.geeksforgeeks.org/binary-heap/) data structure!.
+This is an efficient ES6 implementation for **priority queue** using [Binary Heap(Max/Min)](https://en.wikipedia.org/wiki/Binary_heap) or [here](https://www.geeksforgeeks.org/binary-heap/) data structure !.
 
 ##  [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
 
