@@ -1,3 +1,5 @@
+[![](https://data.jsdelivr.com/v1/package/npm/byheap/badge)](https://www.jsdelivr.com/package/npm/byheap)
+
 ## What is this ?
 
 This is an efficient ES6 implementation for **priority queue** using [Binary Heap(Max/Min)](https://en.wikipedia.org/wiki/Binary_heap) or [here](https://www.geeksforgeeks.org/binary-heap/) data structure !.
