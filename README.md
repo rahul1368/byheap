@@ -1,9 +1,6 @@
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/rahul1368/byheap/graphs/commit-activity) [![](https://data.jsdelivr.com/v1/package/npm/byheap/badge)](https://www.jsdelivr.com/package/npm/byheap) [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)]([![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
-) [![GitHub tag](https://img.shields.io/github/tag/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/tags/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/rahul1368/byheap/graphs/commit-activity) [![](https://data.jsdelivr.com/v1/package/npm/byheap/badge)](https://www.jsdelivr.com/package/npm/byheap) 
 
-
-
-x## What is this ?
+## What is this ?
 
 This is an efficient ES6 implementation for **priority queue** using [Binary Heap(Max/Min)](https://en.wikipedia.org/wiki/Binary_heap) or [here](https://www.geeksforgeeks.org/binary-heap/) data structure !.
 
