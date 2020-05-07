@@ -1,6 +1,6 @@
 {
   "name": "byheap",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "An efficient es6 implementation of priority queue using binary heap data structure",
   "main": "lib/index.js",
   "scripts": {
