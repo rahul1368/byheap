@@ -60,6 +60,13 @@ Examples:
 
 `npm i byheap --save`
 
+## Testing 
+
+`git clone https://github.com/rahul1368/byheap.git byheap`
+`cd byheap`
+`npm i`
+`npm run test`
+
 ## Type of binary heaps supported?
 
 This implementation supports **max heap and min heap** both.
