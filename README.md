@@ -63,11 +63,21 @@ Examples:
 ## Testing 
 
 ```
-git clone https://github.com/rahul1368/byheap.git byheap // Clone repository into local directory named byheap
-cd byheap  // Go to byheap directory
-npm i  or npm install  // Install devDependencies
-npm run prepare  // Transpiling source code from ES6 to ES2015 
-npm run test   // Running tests by mocha and chai 
+# Clone repository into local directory named byheap
+git clone https://github.com/rahul1368/byheap.git byheap
+
+# Go to byheap directory
+cd byheap 
+
+# Install devDependencies
+npm i  or npm install 
+
+# Transpiling source code from ES6 to ES2015 
+npm run prepare
+
+# Running tests by mocha and chai 
+npm run test
+
 ```
 
 ## Type of binary heaps supported?
