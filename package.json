@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha test/src || true",
-    "prepublish": "babel src --out-dir lib"
+    "prepare": "babel src --out-dir lib"
   },
   "babel": {
     "presets": [
