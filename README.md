@@ -86,30 +86,30 @@ This implementation supports **max heap and min heap** both.
 
 **[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) also provide following methods till now :**
 
-* **[insert](https://en.wikipedia.org/wiki/Binary_heap#Insert)** < newItem > : accepts one parameter(i.e newItem) and returns updated BinaryHeap Object with type provided in constructor    
+* **[insert](https://en.wikipedia.org/wiki/Binary_heap#Insert)** < newItem > : accepts one parameter(i.e newItem) and returns updated Priority Queue i.e. BinaryHeap Object with type provided in constructor    
     **Method Signature :** BinaryHeap insert(newItem)
 
-    Here **newItem** could be a **object with a special attribute named key(with value number)** or a **number** or **a number represented as string**
+    Here **newItem** could be a **object with a special attribute named key(with value of type number)** or a **number** or **a number represented as string** i.e. the priority of newItem
 
-    **Example : newItem = {key:2,...} or 2 or '2'**
+    **Example : newItem = {key:2,...} or 2 or '2'** , here 2 is the priority of newItem
 
-* **updateKey** < newItem , position > : accepts two parameter(i.e newItem , position) and returns updated BinaryHeap Object with type provided in constructor
+* **updateKey** < newItem , position > : accepts two parameter(i.e newItem , position) and returns updated Priority Queue i.e. BinaryHeap Object with type provided in constructor
 
     **Method Signature :** BinaryHeap updateKey(newItem,position)
     
     Here **postion** will be **a integer with satisfying following condition:**
     
-    **0 <= position < BinaryHeap Size**
+    **0 <= position < Priority Queue i.e. BinaryHeap Size**
 
-* **[extract](https://en.wikipedia.org/wiki/Binary_heap#Extract)** : The procedure for deleting the root from the heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap (also known as bubble-down, percolate-down, sift-down, sink-down, trickle down, heapify-down, cascade-down, and extract-min/max).
+* **[extract](https://en.wikipedia.org/wiki/Binary_heap#Extract)** : The procedure for deleting the root from the priority queue i.e. heap (effectively extracting the maximum element in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap (also known as bubble-down, percolate-down, sift-down, sink-down, trickle down, heapify-down, cascade-down, and extract-min/max).
 
     **Method Signature :** item extract()
 
-    Here **item** will be a **maximum key item or minimum key item** in case of **max heap or min heap** respectively.
+    Here **item** will be a **maximum key item(i.e. maximum priorty item) or minimum key item(minimum priority item)** in case of **max heap or min heap** respectively.
 
     **Note :** After **extract operation heap root element will be deleted** and heap will **reorganize itself to maintain heap property.**
 
-* **[sort](https://en.wikipedia.org/wiki/Heapsort)** < order > : accepts one parameter order ( 1 for increasing and 2 for decreasing order) and returns a sorted list of heap items.This operation does not mutates heap.
+* **[sort](https://en.wikipedia.org/wiki/Heapsort)** < order > : accepts one parameter order ( 1 for increasing and 2 for decreasing order) and returns a sorted list of priority queue i.e. heap items.This operation does not mutates priority queue i.e heap.
 
     **Method Signature:** List< item > sort(order)
     
@@ -126,15 +126,15 @@ This implementation supports **max heap and min heap** both.
   
   If you pass first parameter as a list of numbers, then each number will be considered as the priority of items correspondingly.
 
-* **Second Parameter** is type of Priority Queue i.e. implementation by Binary Max Heap or Binary Min Heap
+* **Second Parameter** is type of Priority Queue i.e. implemented by Binary Max Heap or Binary Min Heap
 
-* **Type** can accept two values 1 (for Max Heap) or 2 (for Min Heap).
+* **Type** can accept two values 1 (Priority Queue implemented by Binary Max Heap) or 2 (Priority Queue implemented by Binary Min Heap).
   
-  Relation between (node or item)'s priority and (node or item)'s key attribute value will depend on this parameter value. 
+  **Relation between (node or item)'s priority and (node or item)'s key attribute value will depend on this parameter value.** 
   
-  So if you want that item's with high key attribute value should have high priority in priority queue,then pass 1 as second parameter value.
+    ** **So if you want that item's with high key attribute value should have high priority in priority queue,then pass 1 as second parameter value.**
   
-  Otherwise if you want that item's with low key attribute value should have high priority in priority queue,then pass 2 as second parameter value.
+    ** **Otherwise if you want that item's with low key attribute value should have high priority in priority queue,then pass 2 as second parameter value.**
   
     **Constructor Signature :** BinaryHeap(List< item >,type) 
     
