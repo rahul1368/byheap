@@ -105,7 +105,7 @@ This implementation supports **max heap and min heap** both.
 
     **Method Signature :** item extract()
 
-    Here **item** will **maximum key item and minimum key item** in case of **max heap and min heap** respectively.
+    Here **item** will be a **maximum key item or minimum key item** in case of **max heap or min heap** respectively.
 
     **Note :** After **extract operation heap root element will be deleted** and heap will **reorganize itself to maintain heap property.**
 
@@ -122,15 +122,23 @@ This implementation supports **max heap and min heap** both.
 
 **[BinaryHeap](https://en.wikipedia.org/wiki/Binary_heap) constructor accepts two parameters (List< item >,type).**
 
-* **First parameter** is a list of items (nodes) , where list represent in order traversal of complete binary tree node values.First element of list represent the root of given complete binary tree.
+* **First parameter** is a list of items (nodes) , where each item of the list will be an object,with an attribute key(its value will be considered the priority of the item).
+  
+  If you pass first parameter as a list of numbers, then each number will be considered as the priority of items correspondingly.
 
-* **Second Parameter** is type of Binary Heap i.e. Max Heap or Min Heap
+* **Second Parameter** is type of Priority Queue i.e. implementation by Binary Max Heap or Binary Min Heap
 
 * **Type** can accept two values 1 (for Max Heap) or 2 (for Min Heap).
-
+  
+  Relation between (node or item)'s priority and (node or item)'s key attribute value will depend on this parameter value. 
+  
+  So if you want that item's with high key attribute value should have high priority in priority queue,then pass 1 as second parameter value.
+  
+  Otherwise if you want that item's with low key attribute value should have high priority in priority queue,then pass 2 as second parameter value.
+  
     **Constructor Signature :** BinaryHeap(List< item >,type) 
     
-    Here item could be a object with a special attribute named key(with value number) or a number or a number represented as string
+    Here item could be a object with a special attribute named key(with value of type number) or a number or a number represented as string
 
     **Example : item = {key:2,...} or 2 or '2'**
 
@@ -165,9 +173,6 @@ Output..
 ```
 
 Max Heap 1 (items as object):  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -192,9 +197,6 @@ Max Heap 1 (items as object):  BinaryHeap {
   heapSize: 9,
   type: 1 }
 Min Heap 1 (items as object):  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -219,18 +221,12 @@ Min Heap 1 (items as object):  BinaryHeap {
   heapSize: 9,
   type: 2 }
 Max Heap 2 (items as numbers):  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'string',
   draftBT: [ 4, 2, 3, 5, 1, 6, 7, 11, 10 ],
   resHeap: [ '11', '10', '7', '5', '1', '6', '3', '4', '2' ],
   heapSize: 9,
   type: 1 }
 Min Heap 2 (items as numbers):  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'string',
   draftBT: [ 4, 2, 3, 5, 1, 6, 7, 11, 10 ],
   resHeap: [ '1', '2', '3', '5', '4', '6', '7', '11', '10' ],
@@ -255,9 +251,6 @@ Min Heap 2 (items as numbers):  BinaryHeap {
 Output ...
 ```
 Max Heap 1 After Insertion:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -283,9 +276,6 @@ Max Heap 1 After Insertion:  BinaryHeap {
   heapSize: 10,
   type: 1 }
 Min Heap 1 After Insertion:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -326,9 +316,6 @@ Output ...
 
 ```
 Max Heap 1 After Updation:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -354,9 +341,6 @@ Max Heap 1 After Updation:  BinaryHeap {
   heapSize: 10,
   type: 1 }
 Min Heap 1 After Updation:  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -401,9 +385,6 @@ Output ...
 Extracted node from Max Heap 1 :  { key: 23 }
 
 Max Heap 1 after extraction :  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
@@ -431,9 +412,6 @@ Max Heap 1 after extraction :  BinaryHeap {
 Extracted node from Min Heap 1 :  { key: 1 }
 
 Min Heap 1 after extraction :  BinaryHeap {
-  BINARY_HEAP_IDENTIFIER: { MAX_HEAP: 1, MIN_HEAP: 2 },
-  NODE_IDENTIFIER: { LEFT: 1, RIGHT: 1 },
-  SORT_ORDER: { INC: 1, DEC: 2 },
   nodeType: 'object',
   draftBT:
    [ { key: 4 },
